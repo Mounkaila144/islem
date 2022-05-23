@@ -6,6 +6,7 @@ use Orchid\Platform\Models\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     /**
      * The attributes that are mass assignable.
      *
@@ -16,6 +17,9 @@ class User extends Authenticatable
         'email',
         'password',
         'permissions',
+        'prenom',
+        'telephone',
+        'adresse',
     ];
 
     /**
