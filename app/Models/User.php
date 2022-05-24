@@ -2,10 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Notifications\Notifiable;
 use Orchid\Platform\Models\User as Authenticatable;
+use Laravel\Sanctum\HasApiTokens;
+
 
 class User extends Authenticatable
 {
+    use HasApiTokens, HasFactory, Notifiable;
+
     use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     /**
      * The attributes that are mass assignable.

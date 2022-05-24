@@ -10,6 +10,7 @@ class Post extends Model
 {
     use AsSource;
 
+
     /**
      * @var array
      */
